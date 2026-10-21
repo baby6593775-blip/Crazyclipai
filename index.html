@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0b10">
+<title>CrazyClip AI — Turn Long Videos Into Shorts</title>
+<meta name="description" content="CrazyClip AI helps creators turn long videos into vertical Shorts. Paste a YouTube link to get started.">
+<style>
+:root{--bg:#09090d;--panel:#12121a;--line:#292936;--text:#f7f7fb;--muted:#a5a5b5;--red:#ff3154;--red2:#c91438;--green:#8cf0bd}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#35101c 0,transparent 42%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.wrap{width:min(1080px,92%);margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:1px solid #ffffff0d}
+.brand{display:flex;gap:10px;align-items:center;font-size:20px;font-weight:850;letter-spacing:-.6px}.logo{width:39px;height:39px;border-radius:12px;background:linear-gradient(145deg,#ff526e,#db123d);display:grid;place-items:center;box-shadow:0 8px 24px #ff315433}.logo svg{width:22px;height:22px}
+.pill{border:1px solid #3b3b48;color:#d5d5df;padding:8px 12px;border-radius:999px;font-size:12px;font-weight:700}.hero{text-align:center;padding:66px 0 34px}.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid #4a2631;background:#241019;color:#ffb2c0;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:750}.dot{width:7px;height:7px;background:var(--red);border-radius:50%;box-shadow:0 0 12px var(--red)}
+h1{font-size:clamp(38px,7vw,70px);line-height:1.02;letter-spacing:-2.8px;margin:22px auto 18px;max-width:850px}.gradient{background:linear-gradient(90deg,#fff 5%,#ff8da2 55%,#ff3154);-webkit-background-clip:text;background-clip:text;color:transparent}.sub{color:var(--muted);font-size:clamp(15px,2vw,18px);line-height:1.65;max-width:630px;margin:0 auto}
+.panel{max-width:760px;margin:30px auto 0;background:linear-gradient(180deg,#171720,#101016);border:1px solid #353541;border-radius:22px;padding:20px;box-shadow:0 24px 80px #0008;text-align:left}.label{display:block;font-size:13px;font-weight:750;margin:0 0 10px;color:#e4e4ec}.inputrow{display:flex;gap:10px}.urlinput{flex:1;min-width:0;background:#09090e;border:1px solid #373743;border-radius:12px;color:#fff;padding:15px 14px;font-size:14px;outline:none}.urlinput:focus{border-color:#ff526e;box-shadow:0 0 0 3px #ff31541a}.btn{border:0;border-radius:12px;padding:14px 18px;font-weight:850;cursor:pointer;font-size:14px;transition:.15s}.btn-primary{background:linear-gradient(135deg,#ff4262,#d9153b);color:white;box-shadow:0 9px 24px #ff315426}.btn-primary:hover{transform:translateY(-1px);filter:brightness(1.08)}.options{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}.opt{background:#20202a;border:1px solid #393945;color:#d7d7e1;border-radius:9px;padding:8px 12px;font-size:12px;font-weight:750;cursor:pointer}.opt.active{border-color:#ff526e;color:#ffb5c1;background:#35131e}.tiny{color:#888898;font-size:11px;line-height:1.6;margin:14px 0 0}.status{display:none;margin-top:14px;padding:13px;border-radius:12px;background:#20151a;border:1px solid #603040;color:#ffd3dc;font-size:13px;line-height:1.55}.status.show{display:block}.status a{color:#fff;text-decoration:underline;font-weight:800}
+.section{padding:55px 0}.section h2{text-align:center;font-size:clamp(25px,4vw,38px);letter-spacing:-1px;margin:0 0 10px}.sectionlead{text-align:center;color:var(--muted);max-width:600px;margin:0 auto 28px;line-height:1.6}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:linear-gradient(180deg,#15151e,#101016);border:1px solid var(--line);border-radius:17px;padding:20px}.iconbox{width:42px;height:42px;display:grid;place-items:center;background:#2a121b;border:1px solid #512130;border-radius:12px;color:#ff8097;font-size:21px}.card h3{font-size:16px;margin:16px 0 8px}.card p{color:var(--muted);font-size:13px;line-height:1.65;margin:0}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.stepnum{font-size:12px;color:#ff8197;font-weight:900;letter-spacing:1px}.foot{border-top:1px solid #ffffff12;padding:25px 0 35px;color:#888898;font-size:12px;line-height:1.6;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.foot a{color:#c9c9d3}
+@media(max-width:650px){.hero{padding:45px 0 25px}h1{letter-spacing:-1.7px}.panel{padding:14px;border-radius:17px}.inputrow{flex-direction:column}.btn-primary{width:100%}.grid,.steps{grid-template-columns:1fr}.section{padding:38px 0}.card{padding:18px}.nav{padding:14px 0}}
+</style>
+</head>
+<body>
+<header class="wrap nav">
+  <div class="brand"><span class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m10 9 5 3-5 3z"/></svg></span>CrazyClip <span style="color:#ff5572;margin-left:-8px">AI</span></div>
+  <span class="pill">CREATOR TOOL · BETA</span>
+</header>
+<main>
+<section class="wrap hero">
+  <div class="eyebrow"><span class="dot"></span> YOUR NEXT SHORT STARTS HERE</div>
+  <h1>Turn long videos into<br><span class="gradient">viral-ready Shorts.</span></h1>
+  <p class="sub">Find the best moments, shape them for vertical video, and add captions. Start with a YouTube link.</p>
+  <div class="panel">
+    <label class="label" for="url">YouTube video URL</label>
+    <div class="inputrow">
+      <input class="urlinput" id="url" type="url" placeholder="https://www.youtube.com/watch?v=..." autocomplete="url">
+      <button class="btn btn-primary" id="generate">✦ Generate Shorts</button>
+    </div>
+    <div class="options" aria-label="Number of clips">
+      <button class="opt" data-count="1">1 Short</button><button class="opt active" data-count="5">5 Shorts</button><button class="opt" data-count="10">10 Shorts</button>
+    </div>
+    <p class="tiny">Use videos you own or have permission to edit. This starter website is free to host; automatic AI processing still needs a connected clipping service/API.</p>
+    <div class="status" id="status" role="status"></div>
+  </div>
+</section>
+<section class="wrap section">
+  <h2>Made for fast-moving creators</h2>
+  <p class="sectionlead">A clean starting point for your own AI clipping brand.</p>
+  <div class="grid">
+    <article class="card"><div class="iconbox">✂</div><h3>Smart clip workflow</h3><p>Start from a long video and plan multiple short clips from one source.</p></article>
+    <article class="card"><div class="iconbox">▣</div><h3>Vertical-first format</h3><p>Designed around the 9:16 format used by YouTube Shorts and other short-video platforms.</p></article>
+    <article class="card"><div class="iconbox">CC</div><h3>Caption-ready</h3><p>Build toward readable subtitles and creator-friendly exports when a clipping engine is connected.</p></article>
+  </div>
+</section>
+<section class="wrap section" style="padding-top:0">
+  <h2>Three steps. One workflow.</h2>
+  <p class="sectionlead">Simple enough to use on your phone.</p>
+  <div class="steps">
+    <article class="card"><div class="stepnum">STEP 01</div><h3>Paste a video link</h3><p>Add a YouTube URL for a video you have permission to use.</p></article>
+    <article class="card"><div class="stepnum">STEP 02</div><h3>Choose your clips</h3><p>Select how many Shorts you want to create.</p></article>
+    <article class="card"><div class="stepnum">STEP 03</div><h3>Generate and review</h3><p>Connect an AI clipping API to enable processing and exports.</p></article>
+  </div>
+</section>
+</main>
+<footer class="wrap foot"><span>© <span id="year"></span> CrazyClip AI · Independent creator project</span><span>Not affiliated with YouTube. Use content responsibly.</span></footer>
+<script>
+const countButtons=[...document.querySelectorAll('.opt')];
+let clipCount=5;
+countButtons.forEach(b=>b.addEventListener('click',()=>{clipCount=Number(b.dataset.count);countButtons.forEach(x=>x.classList.toggle('active',x===b));}));
+const input=document.getElementById('url'), status=document.getElementById('status');
+document.getElementById('generate').addEventListener('click',()=>{
+ const value=input.value.trim();
+ if(!value){status.innerHTML='Please paste a YouTube video URL first.';status.classList.add('show');input.focus();return;}
+ let u;try{u=new URL(value)}catch(e){status.textContent='That link does not look valid. Paste a full YouTube URL.';status.classList.add('show');return;}
+ if(!/(^|\.)youtube\.com$|(^|\.)youtu\.be$/.test(u.hostname)){status.textContent='Please use a YouTube video link (youtube.com or youtu.be).';status.classList.add('show');return;}
+ status.innerHTML='Your link is ready and '+clipCount+' Shorts selected. Automatic generation is not connected yet in this free starter version. You can test a clipping service now: <a href="https://www.openshorts.app/" target="_blank" rel="noopener">Open OpenShorts</a> or <a href="https://www.klypse.app/free-shorts-maker" target="_blank" rel="noopener">Klypse</a>.';
+ status.classList.add('show');
+});
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
